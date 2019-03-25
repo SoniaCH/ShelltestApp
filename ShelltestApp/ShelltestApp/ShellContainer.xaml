@@ -1,0 +1,66 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Shell xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+       xmlns:local="clr-namespace:ShelltestApp"
+       x:Class="ShelltestApp.ShellContainer">
+    <Shell.Resources>
+        <!--Android Colors -->
+        <!--<ResourceDictionary>
+            <Style x:Key="BaseStyle" TargetType="Element">
+                <Setter Property="Shell.ShellTabBarUnselectedColor" Value="LightGray" />
+                -->
+        <!--For the Title and the icon in the bottom bar-->
+        <!--
+                <Setter Property="Shell.ShellTitleColor" Value="#FF3C3934" />
+                -->
+        <!--For the header-->
+        <!--
+                <Setter Property="Shell.ShellBackgroundColor" Value="#FF3C3934" />
+                -->
+        <!--For the bottom tab-->
+        <!--
+                <Setter Property="Shell.ShellTabBarBackgroundColor" Value="White" />
+            </Style>
+        </ResourceDictionary>-->
+        <!--Ios Colors -->
+        <ResourceDictionary>
+            <Style x:Key="BaseStyle" TargetType="Element">
+                <!--does not affect -->
+                <Setter Property="Shell.ShellTabBarUnselectedColor" Value="Green" />
+                <!--does not affect -->
+                <Setter Property="Shell.ShellTitleColor" Value="Red" />
+                <!--For the header-->
+                <Setter Property="Shell.ShellBackgroundColor" Value="Yellow" />
+                <!--For the bottom tab-->
+                <Setter Property="Shell.ShellTabBarBackgroundColor" Value="SandyBrown" />
+            </Style>
+        </ResourceDictionary>
+    </Shell.Resources>
+  
+  
+    <ShellItem Route="tabs"
+               Style="{StaticResource BaseStyle}"
+               Title="Bottom Tab Sample">
+        <ShellSection Route="homeTab" Icon="Home.png">
+            <ShellContent Route="homeContent" x:Name="home">
+                <local:Home/>
+            </ShellContent>
+            <!--<ShellContent x:Name="home" ContentTemplate="{DataTemplate local:Home}"/>-->
+        </ShellSection>
+        <ShellSection Route="details" Icon="category.png">
+            <ShellContent Route="detailTicket" x:Name="details">
+                <local:Category/>
+            </ShellContent>
+        </ShellSection>
+        <ShellSection Route="Cart" Icon="ticket.png">
+            <ShellContent Route="TicketsList" x:Name="tickets">
+                <local:CartWithTickets/>
+            </ShellContent>
+        </ShellSection>
+        <ShellSection Route="Profile" Icon="account.png">
+            <ShellContent Route="ContentProfile" x:Name="profile">
+                <local:AccountPage/>
+            </ShellContent>
+        </ShellSection>
+    </ShellItem>
+</Shell>
