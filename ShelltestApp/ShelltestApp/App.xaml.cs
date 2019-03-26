@@ -11,6 +11,7 @@ namespace ShelltestApp
         {
             InitializeComponent();
 
+          //  MainPage = new MainPage();
             MainPage = new ShellContainer();
         }
 
