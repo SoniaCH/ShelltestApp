@@ -9,20 +9,12 @@
     <Shell.Resources>
         <ResourceDictionary>
             <Style x:Key="BaseStyle" TargetType="Element">
-                <!--does not affect -->
-                <!--unselected color for android -->
-                <Setter Property="Shell.ShellTabBarUnselectedColor" Value="Green" />
-                <!--unselected color for ios -->
-                <Setter Property="Shell.ShellUnselectedColor" Value="Green" />
-                <!--title color ios -->
-                <!--title color and tabselected color for android -->
                 <Setter Property="Shell.ShellTitleColor" Value="White" />
-                <!--tabselected color ios -->
-                <Setter Property="Shell.ShellForegroundColor" Value="White" />
-                <!--For the header-->
                 <Setter Property="Shell.ShellBackgroundColor" Value="#443E43" />
-                <!--For the bottom tab android-->
-                <Setter Property="Shell.ShellTabBarBackgroundColor" Value="BlueViolet" />
+                <Setter Property="Shell.ShellTabBarBackgroundColor" Value="White" />
+                <Setter Property="Shell.ShellTabBarForegroundColor" Value="#FF3C3934" />
+                <Setter Property="Shell.ShellTabBarTitleColor" Value="#FF3C3934" />
+                <Setter Property="Shell.ShellTabBarUnselectedColor" Value="LightGray" />
             </Style>
         </ResourceDictionary>
     </Shell.Resources>
